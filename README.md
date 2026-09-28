@@ -218,3 +218,4 @@ Dialect Hibernate 7 para SQLite com:
 - **Uploads**: Salvos em `uploads/` (configurável via `upload.dir`).
 - **Categoria id=0**: O front-end envia `{id:0}` para "sem categoria"; o backend converte para `null`.
 - **JSON serialization**: `@JsonIgnoreProperties("order")` e `@JsonIgnoreProperties("items")` evitam loop infinito em `Order ↔ OrderItem`.
+# neide-confeitaria-python
