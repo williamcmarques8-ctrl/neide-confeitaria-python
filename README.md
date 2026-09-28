@@ -220,3 +220,4 @@ Dialect Hibernate 7 para SQLite com:
 - **JSON serialization**: `@JsonIgnoreProperties("order")` e `@JsonIgnoreProperties("items")` evitam loop infinito em `Order ↔ OrderItem`.
 # neide-confeitaria-python
 # neide-confeitaria-python
+# neide-confeitaria-python
