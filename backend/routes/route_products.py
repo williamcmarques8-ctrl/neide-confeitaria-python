@@ -1,11 +1,8 @@
 from main import app, db
-from models import *
+from models.models_cardapio import *
 from flask import jsonify, request
 
-@app.route("/categories", methods=["GET"])
-def categories_get():
-    categories_db = Category.query.all()
-    return jsonify([c.to_dict() for c in categories_db])
+
 
 @app.route("/products", methods=['GET'])
 def products_get():
@@ -27,12 +24,13 @@ def products_get():
 
 @app.route("/products", methods=['POST'])
 def products_post():
-    data = request.get.json()
+    data = request.get_json()
 
     new_product = Product(
         name =data.get('name'),
         price =data.get('price'),
         id_category=data.get('categoryId')
+        
     )
 
     db.session.add(new_product)
@@ -48,3 +46,5 @@ def products_by_id_get(id):
     if not get_product_by_id:
         return jsonify({"error": "Produto não encontrado"})
     return jsonify(get_product_by_id.to_dict())
+
+

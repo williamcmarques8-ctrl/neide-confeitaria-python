@@ -1,4 +1,4 @@
-from extensions import db
+from models.extensions import db
 
 class Category(db.Model):
     id_category = db.Column(db.Integer, primary_key=True)
